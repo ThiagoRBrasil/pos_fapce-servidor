@@ -8,8 +8,11 @@ Rails.application.routes.draw do
 			#put "products/:id", to: "products#update"
 			#get "products/:id", to: "products#show"
 
-			resources :products #mesma função das linhas de cima
-			resources :pieces
+			resources :products do #mesma função das linhas de cima
+
+				resources :pieces
+
+			end
 		end
 	end  
 end

@@ -5,7 +5,7 @@ class Api::V1::PiecesController < ApplicationController
 		#render json: Piece.all, status: :ok
 
 		piece = Piece.where product_id: params[:product_id]
-		render json: pieces, status: :ok
+		render json: piece, status: :ok
 	end
 
 	def create
